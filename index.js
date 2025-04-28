@@ -55,16 +55,40 @@ function descobrirNome() {
     const NomedoDia = nomesPorDia[diaEscolhido];
 
     const resposta = document.getElementById("resposta");
-    resposta.innerText = `O Nome da Sua Banda é: ${Nomedabanda} ${NomedoDia} 🤘`;
-    
-    
+    resposta.innerText = `🤘O Nome da Sua Banda é: ${Nomedabanda} ${NomedoDia} 🤘
+    Cara! Isso é tão Rock`;
+
+
     resposta.classList.remove("opacity-0");
     resposta.classList.add("opacity-100");
 
-    
+
     resposta.style.animation = "piscar 0.5s infinite alternate";
 
     setTimeout(() => {
         resposta.style.animation = "";
     }, 2000);
 }
+function descobrirIdade() {
+    const idadeInput = document.getElementById("idadeInput");
+    const resposta = document.getElementById("resposta");
+
+    const idadeMinima = parseInt(idadeInput.value);
+
+    if (isNaN(idadeMinima)) {
+        resposta.innerText = "Idade inválida. Por favor, insira um número.";
+    } else if (idadeMinima >= 18) {
+        resposta.innerText = "Maior de Idade";
+    } else {
+        resposta.innerText = "Menor de Idade";
+    }
+
+    resposta.classList.remove("opacity-0");
+    resposta.classList.add("opacity-100");
+
+    resposta.style.animation = "piscar 0.5s infinite alternate";
+    setTimeout(() => {
+        resposta.style.animation = "";
+    }, 2000);
+}
+

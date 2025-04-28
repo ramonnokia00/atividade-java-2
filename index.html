@@ -28,8 +28,8 @@
 <body class="bg-black text-center font-winky ">
     <div>
         <div class="mb-[30px]">
-            <div class="w-[400px] h-[400px] bg-green-500 rounded-[50%] absolute ml-[280px] z-0 xl:ml-[780px]"></div>
-            <img src="image/bateria.png" alt="" class="ml-[300px] xl:ml-[800px] z-10 relative">
+            <div class="w-[400px] h-[400px] bg-green-500 rounded-[50%] absolute ml-[280px] z-0 xl:ml-[450px]"></div>
+            <img src="image/bateria.png" alt="" class="ml-[300px] xl:ml-[475px] z-10 relative">
         </div>
         <H1 class="text-green-500 text-6xl text-center">Monte Sua Banda</H1>
         <p class="text-white">No "Como Saber Sua Banda", é só colocar seu dia e mês de nascimento e descobrir qual banda
@@ -99,6 +99,17 @@
 
     <script src="index.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <div id="idade">
+        <h3 class="text-white">Questão 1 - If Else</h3>
+        <p class="text-white">Coloque Sua Idade e Descubra Se Você é maior de idade.</p>
+    
+        <input type="number" id="idadeInput" placeholder="Digite Sua Idade" class="mb-2 p-1 rounded">
+        
+        <button onclick="descobrirIdade()"
+            class="bg-white hover:bg-green-500 hover:text-white px-[20px] duration-[500ms]">Confirmar</button>
+        <div id="resposta" class="text-white text-xl opacity-0 transition-opacity duration-1000 mt-2"></div>
+    </div>
+    
 </body>
 <style>
     @keyframes piscar {
