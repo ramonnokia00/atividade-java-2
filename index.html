@@ -5,13 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qual o nome da sua banda </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        winky: ['"Winky Rough"', 'sans-serif'],
+                    },
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
 </head>
 
-<body>
+<body class="bg-black text-center font-winky ">
+    <div>
+        <div class="mb-[30px]">
+            <div class="w-[400px] h-[400px] bg-green-500 rounded-[50%] absolute ml-[280px] z-0 xl:ml-[780px]"></div>
+            <img src="image/bateria.png" alt="" class="ml-[300px] xl:ml-[800px] z-10 relative">
+        </div>
+        <H1 class="text-green-500 text-6xl text-center">Monte Sua Banda</H1>
+        <p class="text-white">No "Como Saber Sua Banda", é só colocar seu dia e mês de nascimento e descobrir qual banda
+            combina com você. Rápido, divertido e cheio de surpresas!
+        <p>
 
-    <div class="">
-        <label for="">Digite Seu dia de aniversario</label>
-        <select name="" id="dia">
+    </div>
+    <div class="">👨‍💻
+        <label for="" class="text-white">Digite Seu dia de aniversario</label>
+        <select name="" id="dia" class="hover:bg-black bg-black text-white px-[20px] items-center">
             <option>1</option>
             <option>1</option>
             <option>2</option>
@@ -46,8 +74,8 @@
             <option>31</option>
 
         </select>
-        <label for="">Escolha seu mês de seu aniversario</label>
-        <select id="mes">
+        <label for="" class="text-white">Escolha seu mês de seu aniversario</label>
+        <select id="mes" class="hover:bg-black bg-black text-white">
             <option>Jan</option>
             <option>Fev</option>
             <option>Mar</option>
@@ -61,11 +89,27 @@
             <option>Nov</option>
             <option>Dez</option>
         </select>
-        <button onclick="descobrirNome()">Confirmar</button>
+        👨‍💻
+    </div>
+    <div>
+        <button onclick="descobrirNome()"
+            class="bg-white text-3xl mt-6 hover:bg-green-500 hover:text-white duration-[1000ms] rounded-[8px] p-[40px]">Confirmar</button>
+        <div id="resposta" class="mt-[20px] text-white text-xl opacity-0 transition-opacity duration-1000 "></div>
     </div>
 
     <script src="index.js"></script>
-
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
+<style>
+    @keyframes piscar {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0.3;
+        }
+    }
+</style>
 
 </html>

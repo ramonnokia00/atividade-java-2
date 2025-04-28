@@ -1,6 +1,6 @@
 function descobrirNome() {
-    let diaEscolhido = document.querySelector("#dia").value;
-    let mesEscolhido = document.querySelector("#mes").value;
+    let diaEscolhido = document.getElementById("dia").value;
+    let mesEscolhido = document.getElementById("mes").value;
     
 
     let Nomedabanda = "";
@@ -171,5 +171,17 @@ function descobrirNome() {
 
 
     }
-    alert(`O Nome Da Sua banda é ${Nomedabanda} ${NomedoDia} :p`);
+    document.getElementById("resposta").innerText =`🤘O Nome Da Sua banda é ${Nomedabanda} ${NomedoDia} :p
+    Isso é Tão Rock Mano🤘`
+    ;
+
+    resposta.classList.remove("opacity-0");
+    resposta.classList.add("opacity-100");
+
+    
+    resposta.style.animation = "piscar 0.5s infinite alternate";
+
+    setTimeout(() => {
+        resposta.style.animation = "";
+    }, 2000);
 }
